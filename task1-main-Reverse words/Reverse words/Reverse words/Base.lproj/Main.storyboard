@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FA6-oW-nnl">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FYs-Kc-mZq">
+            <objects>
+                <navigationController id="FA6-oW-nnl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2gK-0B-826">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eFm-jC-uN1" kind="relationship" relationship="rootViewController" id="hab-EO-3ha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haM-nn-wCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="20"/>
+        </scene>
+        <!--Reverse Words -->
+        <scene sceneID="lBb-Ar-AG6">
+            <objects>
+                <viewController id="eFm-jC-uN1" customClass="ViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ps-rY-Jjc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5A-c6-brJ">
+                                <rect key="frame" x="16" y="108" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="d5X-jW-qgU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYA-0h-7n2">
+                                <rect key="frame" x="16" y="293" width="343" height="33"/>
+                                <accessibility key="accessibilityConfiguration" identifier="inputField"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="5Ke-OF-EMt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heK-Do-h1f">
+                                <rect key="frame" x="20" y="934" width="728" height="60"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="reverseButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gKG-Cs-hVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="Reverse">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="reverseButton:" destination="eFm-jC-uN1" eventType="touchUpInside" id="EB3-ml-2b2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7Q-gu-jgu">
+                                <rect key="frame" x="25" y="157" width="325" height="106"/>
+                                <accessibility key="accessibilityConfiguration" identifier="infoLabel"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuZ-DP-Mn0">
+                                <rect key="frame" x="16" y="332" width="343" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lI3-x4-QRI"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WfD-aX-yxc">
+                                <rect key="frame" x="16" y="341" width="343" height="32"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChange:" destination="eFm-jC-uN1" eventType="valueChanged" id="9Rp-j3-Vn5"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-bz-ZnR">
+                                <rect key="frame" x="16" y="396" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignore" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ll-IH-bHZ">
+                                <rect key="frame" x="25" y="388.5" width="325" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="rulesField"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uac-kW-bMu">
+                                <rect key="frame" x="16" y="425" width="343" height="85"/>
+                                <accessibility key="accessibilityConfiguration" identifier="resultLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="eML-V9-15h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="trailing" secondItem="8ps-rY-Jjc" secondAttribute="trailingMargin" id="0Pj-J0-8Lw"/>
+                            <constraint firstItem="WfD-aX-yxc" firstAttribute="trailing" secondItem="OuZ-DP-Mn0" secondAttribute="trailing" id="3ME-Vh-6H5"/>
+                            <constraint firstItem="l7Q-gu-jgu" firstAttribute="centerX" secondItem="N5A-c6-brJ" secondAttribute="centerX" id="3Tr-5O-6kL"/>
+                            <constraint firstItem="uac-kW-bMu" firstAttribute="trailing" secondItem="qYA-0h-7n2" secondAttribute="trailing" id="6oO-cd-J4h"/>
+                            <constraint firstItem="qYA-0h-7n2" firstAttribute="top" secondItem="l7Q-gu-jgu" secondAttribute="bottom" constant="30" id="7pf-V6-CmO"/>
+                            <constraint firstItem="uac-kW-bMu" firstAttribute="leading" secondItem="qYA-0h-7n2" secondAttribute="leading" id="ACv-gO-nH5"/>
+                            <constraint firstItem="OuZ-DP-Mn0" firstAttribute="top" secondItem="uac-kW-bMu" secondAttribute="top" constant="-93" id="Fev-Ya-j62"/>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="trailing" secondItem="qYA-0h-7n2" secondAttribute="trailing" id="Ljk-sa-QN1"/>
+                            <constraint firstItem="N5A-c6-brJ" firstAttribute="top" secondItem="wNq-5N-0M8" secondAttribute="top" constant="64" id="Mt1-yS-VLg"/>
+                            <constraint firstItem="WfD-aX-yxc" firstAttribute="trailing" secondItem="pFx-bz-ZnR" secondAttribute="trailing" id="NR0-fW-EGF"/>
+                            <constraint firstItem="l7Q-gu-jgu" firstAttribute="top" secondItem="N5A-c6-brJ" secondAttribute="bottom" constant="8" id="O9A-XU-PlH"/>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="leading" secondItem="8ps-rY-Jjc" secondAttribute="leadingMargin" id="SFc-DW-z4I"/>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="leading" secondItem="qYA-0h-7n2" secondAttribute="leading" id="Sk5-xg-fPZ"/>
+                            <constraint firstItem="WfD-aX-yxc" firstAttribute="leading" secondItem="pFx-bz-ZnR" secondAttribute="leading" id="Xic-pc-62q"/>
+                            <constraint firstItem="l7Q-gu-jgu" firstAttribute="leading" secondItem="wNq-5N-0M8" secondAttribute="leading" constant="25" id="YcA-sg-OSq"/>
+                            <constraint firstItem="qYA-0h-7n2" firstAttribute="top" secondItem="8ps-rY-Jjc" secondAttribute="top" constant="293" id="a9T-c6-dyB"/>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="trailing" secondItem="N5A-c6-brJ" secondAttribute="trailing" id="adz-Nw-pgw"/>
+                            <constraint firstItem="7ll-IH-bHZ" firstAttribute="firstBaseline" secondItem="WfD-aX-yxc" secondAttribute="baseline" constant="48.666666666666629" id="cFF-3g-D1v"/>
+                            <constraint firstItem="pFx-bz-ZnR" firstAttribute="top" secondItem="WfD-aX-yxc" secondAttribute="bottom" constant="24" id="d8g-fI-JCs"/>
+                            <constraint firstItem="uac-kW-bMu" firstAttribute="top" secondItem="qYA-0h-7n2" secondAttribute="bottom" constant="99" id="fbV-yn-9bh"/>
+                            <constraint firstItem="WfD-aX-yxc" firstAttribute="leading" secondItem="OuZ-DP-Mn0" secondAttribute="leading" id="geA-SS-tMe"/>
+                            <constraint firstItem="OuZ-DP-Mn0" firstAttribute="trailing" secondItem="qYA-0h-7n2" secondAttribute="trailing" id="hvG-oE-uCF"/>
+                            <constraint firstItem="wNq-5N-0M8" firstAttribute="trailing" secondItem="7ll-IH-bHZ" secondAttribute="trailing" constant="25" id="mdA-Lt-TL8"/>
+                            <constraint firstItem="7ll-IH-bHZ" firstAttribute="leading" secondItem="wNq-5N-0M8" secondAttribute="leading" constant="25" id="qfR-Gb-Dum"/>
+                            <constraint firstItem="OuZ-DP-Mn0" firstAttribute="leading" secondItem="qYA-0h-7n2" secondAttribute="leading" id="qyW-8S-Ykg"/>
+                            <constraint firstItem="wNq-5N-0M8" firstAttribute="bottom" secondItem="heK-Do-h1f" secondAttribute="bottom" constant="32" id="t6j-Ta-NNW"/>
+                            <constraint firstItem="heK-Do-h1f" firstAttribute="leading" secondItem="N5A-c6-brJ" secondAttribute="leading" id="xq6-iF-W4n"/>
+                            <constraint firstItem="WfD-aX-yxc" firstAttribute="top" secondItem="OuZ-DP-Mn0" secondAttribute="bottom" constant="8" id="y1G-c5-wLi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wNq-5N-0M8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reverse Words " id="fwA-mU-x7E"/>
+                    <connections>
+                        <outlet property="customRulesTextField" destination="7ll-IH-bHZ" id="Hqz-WW-34J"/>
+                        <outlet property="defaultSegmentLabel" destination="pFx-bz-ZnR" id="nyi-g3-tmz"/>
+                        <outlet property="infoLabel" destination="l7Q-gu-jgu" id="c3t-Oz-Hnr"/>
+                        <outlet property="reverseButton" destination="heK-Do-h1f" id="ndF-sa-mur"/>
+                        <outlet property="reverseResultLabel" destination="uac-kW-bMu" id="iZ8-nv-u4p"/>
+                        <outlet property="reverseSegments" destination="WfD-aX-yxc" id="KlV-fa-Wlf"/>
+                        <outlet property="textField" destination="qYA-0h-7n2" id="q7e-XT-ICJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9y-L8-iXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="18.472906403940886"/>
+        </scene>
+    </scenes>
+</document>
